@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Estilos</title>
+    <style>
+
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: white;
+}
+
+header {
+    width: 100wh;
+    height: 50px;
+    padding: 8px 15px;
+}
+
+header span {
+    font-family: sans-serif;
+    font-size: 36px;
+    color: #bf4040;
+    position: relative;
+    left: 40%;
+}
+
+.navegador-superior {
+    background-color: purple;
+    overflow: auto;
+    box-shadow: 0 2px 3px #909090;
+}
+
+.navegador-superior ul {
+    list-style: none;
+}
+
+.navegador-superior>ul>li>a,
+.dropdown .dropdown-button {
+    display: block;
+    text-decoration: none;
+    color: white;
+    float: left;
+    padding: 17px;
+    cursor: pointer;
+    font-size: 17px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    color: #FFFF7A;
+}
+
+.navegador-superior>ul>li>a:hover,
+.dropdown .dropdown-button:hover {
+    background-color: white;
+    color: black;
+}
+
+.dropdown {
+    float: left;
+}
+
+.dropdown-content {
+    position: absolute;
+    background-color: rgba(204, 204, 204, 0.51);
+    width: 400px;
+    max-height: 0px;
+    overflow: hidden;
+    font-family: sans-serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.dropdown:hover .dropdown-content {
+    max-height: 1000px;
+    transition: max-height 1s;
+}
+
+.dropdown .dropdown-button {
+    float: none;
+}
+
+.dropdown-content>ul {
+    list-style: none;
+}
+
+.dropdown-content>ul>li>a {
+    display: block;
+    padding: 5px 20px;
+    text-decoration: none;
+    color: yellow;
+}
+
+.dropdown-content>ul>li>a:hover {
+    background-color: rgba(204, 204, 204, 0.51);
+}
+
+.navegador-lateral {
+    height: 200vh;
+    width: 230px;
+    float: left;
+    box-shadow: 0 2px 5px #909090;
+}
+
+.navegador-lateral>div>ul {
+    list-style: none;
+}
+
+.navegador-lateral>div>ul>li>a {
+    display: block;
+    text-decoration: none;
+    line-height: 1.5;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 18px;
+    color: #bf4040;
+}
+
+.navegador-lateral>div>ul>li>a:hover {
+    background-color: #ddd;
+}
+
+.barra-lateral-direita {
+    position: relative;
+    z-index: -10;
+    height: 200vh;
+    width: 230px;
+    float: right;
+    display: block;
+    box-shadow: 0 2px 5px #909090;
+    background: linear-gradient(white,purple);
+}
+
+.barra-lateral-direita h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: rgb(146, 146, 25);
+    padding: 20px;
+    text-align: center;
+}
+
+.barra-lateral-direita>div ul {
+    list-style: none;
+}
+
+.barra-lateral-direita>div>ul>li>a {
+    display: block;
+    text-decoration: none;
+    line-height: 1.5;
+    padding: 15px;
+    font-family: sans-serif;
+    font-size: 16px;
+    color: rgb(192, 192, 16);
+    text-align: center;
+}
+
+.barra-lateral-direita>div>ul>li>a:hover {
+    background-color: #ddd;
+}
+
+.conteudo {
+    position: relative;
+    animation: cupcake 2s infinite;
+    animation-timing-function: linear;
+}
+
+.conteudo img {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    margin-top: 200px;
+}
+
+@keyframes cupcake {
+    from {
+        left: 0px;
+    }
+    to {
+        left: 200px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navegador-lateral {
+        float: left;
+        width: 100%;
+    }
+}
+
+footer {
+    width: 100%;
+    background-color: purple;
+    color: #FFFF7A;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+}
+    </style>
+</head>
+
+<body>
+    <header>
+        <span> Estilo de vida</span>
+    </header>
+    <nav class="navegador-superior">
+        <ul>
+            <li>
+                <div class="dropdown">
+                    <div class="dropdown-button">
+                        Música
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="">MPB</a></li>
+                            <li><a href="">Rock</a></li>
+                            <li><a href="">Funk</a></li>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <div class="dropdown-button">
+                        Filme
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="">Comédia</a></li>
+                            <li><a href="">Romance</a></li>
+                            <li><a href="">Ação</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <div class="dropdown-button">
+                        Comida
+                    </div>
+                    <div class="dropdown-content">
+                        <ul>
+                            <li><a href="">Brigadeiro</a></li>
+                            <li><a href="">Lasanha</a></li>
+                            <li><a href="">Macarronada</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            </ul>
+    </nav>
+    <nav class="navegador-lateral">
+        <div>
+            <ul>
+                <li><a href="">Bebida</a></li>
+                <li><a href="">Novela</a></li>
+                <li><a href="">Teatro</a></li>
+                <li><a href="">Carro</a></li>
+                <li><a href="">Estética</a></li>
+                <li><a href="">Lazer</a></li>
+            </ul>
+        </div>
+
+    </nav>
+
+    <nav class="barra-lateral-direita">
+        <div>
+            <h2>Sugestões de pets:</h2>
+            <ul>
+                <li><a href="">Cachorros</a></li>
+                <li><a href="">Gatos</a></li>
+                <li><a href="">Pássaros</a></li>
+                <li><a href="">Cobras</a></li>
+            </ul>
+        </div>
+    </nav>
+   
+
+    <div class="conteudo">
+        <img src="img.jpg" alt="">
+    </div>
+
+    <footer>Todos os direitos reservados</footer>
+</body>
+
+</html>
